@@ -13,7 +13,7 @@ function App() {
   const handleGet = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch(`https://<your-function-app-name>.azurewebsites.net/api/GetFizzBuzz?number=${singleNumber}`);
+      const response = await fetch(`https://fizzbuzzappapi20241023230543.azurewebsites.net/api/GetFizzBuzz?number=${singleNumber}`);
       const data = await response.text();
       setGetResult(data);
     } catch (error) {
@@ -26,7 +26,7 @@ function App() {
   const handlePost = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch(`https://<your-function-app-name>.azurewebsites.net/api/GetFizzBuzz`, {
+      const response = await fetch(`https://fizzbuzzappapi20241023230543.azurewebsites.net/api/GetFizzBuzz`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
